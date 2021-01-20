@@ -1,0 +1,30 @@
+{
+  "name": "pattidevlin_dalpsychology",
+  "version": "1.0.0",
+  "description": "Backend and API",
+  "main": "index.js",
+  "repository": "https://git.cs.dal.ca/CommunityOutreach/winter-2020/pattidevlin_dalpsychology.git",
+  "author": "Elijah Whynot <el711412@dal.ca>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --verbose ./backend/index.js",
+    "get-token": "node ./tokenAcquisition/requestToken.js/",
+    "create-db": "node ./database/create-db.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "express-jwt-authz": "^2.3.1",
+    "jwks-rsa": "^1.7.0",
+    "knex": "^0.20.10",
+    "lodash": "^4.17.15",
+    "mysql": "^2.18.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

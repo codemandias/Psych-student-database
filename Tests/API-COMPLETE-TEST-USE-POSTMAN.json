@@ -1,0 +1,911 @@
+{
+	"info": {
+		"_postman_id": "e49e0349-5b04-4158-bdd4-0a42d3799ab1",
+		"name": "CommOut",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-student-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-student-record/?student_id=B00079600",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-student-record",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00079600"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-student-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"student_id\": \"B00000000\",\n    \"department\": \"Animal Science\",\n    \"supervisor_id\": \"Fac222\",\n    \"first_name\": \"Testa\",\n    \"last_name\": \"Testington\",\n    \"previous_degree\": \"Bachelor Neuroscience Honours\",\n    \"previous_school\": \"Dalhousie University\",\n    \"transcript_gpa\": 3.68,\n    \"is_foreign\": \"No\",\n    \"gender\": \"Female\",\n    \"degree_type\": \"PhD\",\n    \"program_type\": \"Non-Clinical\",\n    \"current_degree\": \"Neuroscience\",\n    \"dissertation\": \"A Neuro-Behavioural Analysis of the Prevention of Visual Impairment in the DBA/2J Mouse Model of Glaucoma\",\n    \"phd_award\": \"Yes\",\n    \"thesis_award\": \"Big Award\",\n    \"co_supervisor\": \"Fac221\",\n    \"internal_supervisor\": \"Fac220\",\n    \"comp_finish_date\": \"2010-05-25\",\n    \"convocation_finish_date_phd\": \"2010-10-01\",\n    \"convocation_finish_date_msc\": \"2010-10-02\",\n    \"admission_gpa\": \"3.45\",\n    \"notes\": \"Student stufdetn lorem\",\n    \"email\": \"student@test.com\",\n    \"photo_id\": null,\n    \"admission_date\": \"2010-10-02\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-student-record/?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-student-record",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00079600",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-student-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"department\": \"Plant Science\",\n    \"first_name\": \"Correct\",\n    \"last_name\": \"Name\"\n  }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-student-record/?student_id=B00000000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-student-record",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-publications",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-publications?student_id=B00137215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-publications"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-publication",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"student_id\": \"B00141553\",\n        \"title\": \"Test\",\n        \"publication_status\": \"Complete\",\n        \"publication_date\": \"2020-05-03\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-publications/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-publications",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-publication",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"title\": \"New Title\",\n        \"publication_status\": \"Incomplete\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-publications/?publication_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-publications",
+						""
+					],
+					"query": [
+						{
+							"key": "publication_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-supervisors",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-supervisors?student_id=B00443979",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-supervisors"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00443979"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-supervisor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n       { \"faculty_id\": \"Fac500\",\n        \"faculty_first_name\": \"Ben\",\n        \"faculty_last_name\": \"Rusak\",\n        \"faculty_email\": \"test.test@dal.ca\",\n        \"faculty_role\": \"Regular Faculty\",\n        \"notes\": null}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-supervisor/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-supervisor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-supervisor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\n    \"faculty_first_name\": \"Test\"\n}]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-supervisor/?faculty_id=Fac200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-supervisor",
+						""
+					],
+					"query": [
+						{
+							"key": "faculty_id",
+							"value": "Fac200"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-presentation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-presentation?student_id=B00137215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-presentation"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-presentation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-presentation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"presentation_name\": \"The really bad Presentaiton\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-presentation/?presentation_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-presentation",
+						""
+					],
+					"query": [
+						{
+							"key": "presentation_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-status-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-status-record?student_id=B00137215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-status-record"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-status-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"desc\": \"Inomplete\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-status-record?status_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-status-record"
+					],
+					"query": [
+						{
+							"key": "status_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-scholarship",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-scholarship?student_id=B00137215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-scholarship"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-scholarship",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \t\"student_id\":\"B00524909\",\n        \"scholarship_name\": \"Killam-D\",\n        \"scholarship_type\": \"Old Killam BIGWAARD\",\n        \"scholarship_start_date\": 20070901,\n        \"amount\": 7500,\n        \"scholarship_duration\": 36,\n        \"notes\": null\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-scholarship/?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-scholarship",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215",
+							"disabled": true
+						},
+						{
+							"key": "scholarship_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-scholarship",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\t\n        \"scholarship_type\": \"Big Killam Awards\",\n        \"amount\": 75030\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-scholarship?scholarship_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-scholarship"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215",
+							"disabled": true
+						},
+						{
+							"key": "scholarship_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-admission-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/get-admission-record?student_id=B00443979",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get-admission-record"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00443979"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-admission-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\t\"student_id\":\"B00597199\",\n        \"admission_date\": \"09-01-2013\",\n        \"is_foreign\": \"No\",\n        \"previous_degree\": \"PhD Super Cool Psychology\",\n        \"previous_school\": \"University of Calgary\",\n        \"admission_gpa\": \"3.96\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-admission-record?student_id=B00443979",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-admission-record"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00443979"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-admission-record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\t\n        \"is_foreign\": \"Yes\",\n        \"previous_degree\": \"PhD Super Not Cool Psychology\",\n        \"previous_school\": \"University of Calgary\",\n        \"admission_gpa\": \"3.96\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/update-admission-record?admission_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update-admission-record"
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00443979",
+							"disabled": true
+						},
+						{
+							"key": "admission_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-progress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5ETkZNVGcxUWpZek9EZ3dNVGs1T1RFNFJFUTFRVGd5TVVRMU5ETkRSRVV5UmprMVJEQTVPQSJ9.eyJpc3MiOiJodHRwczovL2RhbC1wc3ljaG9sb2d5LmF1dGgwLmNvbS8iLCJzdWIiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kYWxob3VzaWUtcHN5Y29ob2xvZ3ktYXBpLyIsImlhdCI6MTU4NTkxMzk4OSwiZXhwIjoxNTg2MDAwMzg5LCJhenAiOiJkYllndUNiVXJ1NDk2OHFpYnRCb2FCV09LZ2hpeE0zMCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.jYDunH9FkM4aaIAXnqE0hfSd9en9IeKDRkQ1_TBdZMEQZPEU2Y4gfn2FCyPi95bzEikZkrIqOivwyode1xGCAtcdDxDoJQrx1b1KfeHsx53eYu5hYnCUtEsj65nuQrUih-zOiWeyuveZEkyhAkd2OXf3Km4jhKeiwYyzwb-VDBKSy3wW6EO_YzzIBmr6s5a4tuVPaqihx6bc7bD9e6i4ZarzUk8wIIT3hKprryFAhrw3Q_82z66PDTI6MCWAKhPJQ9tWIZy99ysoR2QHC6Ouulszy-F1jiLXaebc9XNEW7vbWS-Zwe99_YIRJMzS5GR8xjBBg3C0iJU5pWjB2EcAqA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"student_id\": \"B00443979\",\n        \"progress_year\": 1995,\n        \"satisfactory\": 1,\n        \"extension\": \"Yes\",\n        \"comments\": \"No awards for you\"\n    }\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/create-progress/?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create-progress",
+						""
+					],
+					"query": [
+						{
+							"key": "student_id",
+							"value": "B00137215",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

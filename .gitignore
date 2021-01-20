@@ -1,0 +1,10 @@
+#dependencies 
+*/node_modules
+node_modules
+
+#security 
+*/.env
+./.env
+.env
+#temporary files
+*/~$API_Request_Layout.xlsx

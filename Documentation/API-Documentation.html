@@ -1,0 +1,2110 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dalhousie Psychology API</title>
+    <style type="text/css">
+      body {
+	font-family: Trebuchet MS, sans-serif;
+	font-size: 15px;
+	color: #444;
+	margin-right: 24px;
+}
+
+h1	{
+	font-size: 25px;
+}
+h2	{
+	font-size: 20px;
+}
+h3	{
+	font-size: 16px;
+	font-weight: bold;
+}
+hr	{
+	height: 1px;
+	border: 0;
+	color: #ddd;
+	background-color: #ddd;
+}
+
+.app-desc {
+  clear: both;
+  margin-left: 20px;
+}
+.param-name {
+  width: 100%;
+}
+.license-info {
+  margin-left: 20px;
+}
+
+.license-url {
+  margin-left: 20px;
+}
+
+.model {
+  margin: 0 0 0px 20px;
+}
+
+.method {
+  margin-left: 20px;
+}
+
+.method-notes	{
+	margin: 10px 0 20px 0;
+	font-size: 90%;
+	color: #555;
+}
+
+pre {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.http-method {
+ text-transform: uppercase;
+}
+
+pre.get {
+  background-color: #0f6ab4;
+}
+
+pre.post {
+  background-color: #10a54a;
+}
+
+pre.put {
+  background-color: #c5862b;
+}
+
+pre.delete {
+  background-color: #a41e22;
+}
+
+.huge	{
+	color: #fff;
+}
+
+pre.example {
+  background-color: #f3f3f3;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+code {
+  white-space: pre;
+}
+
+.nickname {
+  font-weight: bold;
+}
+
+.method-path {
+  font-size: 1.5em;
+  background-color: #0f6ab4;
+}
+
+.up {
+  float:right;
+}
+
+.parameter {
+  width: 500px;
+}
+
+.param {
+  width: 500px;
+  padding: 10px 0 0 20px;
+  font-weight: bold;
+}
+
+.param-desc {
+  width: 700px;
+  padding: 0 0 0 20px;
+  color: #777;
+}
+
+.param-type {
+  font-style: italic;
+}
+
+.param-enum-header {
+width: 700px;
+padding: 0 0 0 60px;
+color: #777;
+font-weight: bold;
+}
+
+.param-enum {
+width: 700px;
+padding: 0 0 0 80px;
+color: #777;
+font-style: italic;
+}
+
+.field-label {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+
+.field-items	{
+	padding: 0 0 15px 0;
+	margin-bottom: 15px;
+}
+
+.return-type {
+  clear: both;
+  padding-bottom: 10px;
+}
+
+.param-header {
+  font-weight: bold;
+}
+
+.method-tags {
+  text-align: right;
+}
+
+.method-tag {
+  background: none repeat scroll 0% 0% #24A600;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: #FFF;
+  display: inline-block;
+  text-decoration: none;
+}
+
+    </style>
+  </head>
+  <body>
+  <h1>Dalhousie Psychology API</h1>
+    <div class="app-desc">An API for the Dalhousie Psychology Graduate and Masters Student Records Database</div>
+    <div class="app-desc">More information: <a href="https://helloreverb.com">https://helloreverb.com</a></div>
+    <div class="app-desc">Contact Info: <a href="el711412@dal.ca">el711412@dal.ca</a></div>
+    <div class="app-desc">Version: 1.0.0</div>
+    <div class="app-desc">BasePath:/Dalhousie/Dalhousie_psychology/1.0.0</div>
+    <div class="license-info">Apache 2.0</div>
+    <div class="license-url">http://www.apache.org/licenses/LICENSE-2.0.html</div>
+  <h2>Access</h2>
+
+  <h2><a name="__Methods">Methods</a></h2>
+  [ Jump to <a href="#__Models">Models</a> ]
+
+  <h3>Table of Contents </h3>
+  <div class="method-summary"></div>
+  <h4><a href="#Developers">Developers</a></h4>
+  <ul>
+  <li><a href="#createAdmissionRecord"><code><span class="http-method">post</span> /create-admission-record/</code></a></li>
+  <li><a href="#createAwardRecord"><code><span class="http-method">post</span> /create-scholarship/</code></a></li>
+  <li><a href="#createComps"><code><span class="http-method">post</span> /create-comps/</code></a></li>
+  <li><a href="#createPresentations"><code><span class="http-method">post</span> /create-presentation/</code></a></li>
+  <li><a href="#createProgress"><code><span class="http-method">post</span> /create-progress/</code></a></li>
+  <li><a href="#createPublications"><code><span class="http-method">post</span> /create-publications/</code></a></li>
+  <li><a href="#createStatus"><code><span class="http-method">post</span> /create-status-record/</code></a></li>
+  <li><a href="#createStudentRecordPost"><code><span class="http-method">post</span> /create-student-record/</code></a></li>
+  <li><a href="#createSupervisor"><code><span class="http-method">post</span> /create-supervisor/</code></a></li>
+  <li><a href="#getAdmissionRecord"><code><span class="http-method">get</span> /get-admission-record/</code></a></li>
+  <li><a href="#getAwardRecord"><code><span class="http-method">get</span> /get-scholarship/</code></a></li>
+  <li><a href="#getComps"><code><span class="http-method">get</span> /get-comps/</code></a></li>
+  <li><a href="#getPresentations"><code><span class="http-method">get</span> /get-presentation/</code></a></li>
+  <li><a href="#getProgress"><code><span class="http-method">get</span> /get-progress/</code></a></li>
+  <li><a href="#getPublications"><code><span class="http-method">get</span> /get-publications/</code></a></li>
+  <li><a href="#getStatus"><code><span class="http-method">get</span> /get-status-record/</code></a></li>
+  <li><a href="#getStudentRecord"><code><span class="http-method">get</span> /get-student-record/</code></a></li>
+  <li><a href="#getSupervisors"><code><span class="http-method">get</span> /get-supervisors/</code></a></li>
+  <li><a href="#updateAdmissionRecord"><code><span class="http-method">put</span> /update-admission-record/</code></a></li>
+  <li><a href="#updateAwardRecord"><code><span class="http-method">put</span> /update-scholarship/</code></a></li>
+  <li><a href="#updateComps"><code><span class="http-method">put</span> /update-comps/</code></a></li>
+  <li><a href="#updatePresentations"><code><span class="http-method">put</span> /update-presentation/</code></a></li>
+  <li><a href="#updateProgress"><code><span class="http-method">put</span> /update-progress/</code></a></li>
+  <li><a href="#updatePublications"><code><span class="http-method">put</span> /update-publications/</code></a></li>
+  <li><a href="#updateStatus"><code><span class="http-method">put</span> /update-status-record/</code></a></li>
+  <li><a href="#updateStudentRecordPut"><code><span class="http-method">put</span> /update-student-record/</code></a></li>
+  <li><a href="#updateSupervisor"><code><span class="http-method">put</span> /update-supervisor/</code></a></li>
+  </ul>
+
+  <h1><a name="Developers">Developers</a></h1>
+  <div class="method"><a name="createAdmissionRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-admission-record/</code></pre></div>
+    <div class="method-summary">creates a student admission record (<span class="nickname">createAdmissionRecord</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createAdmissionRecord <a href="#createAdmissionRecord">createAdmissionRecord</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AdmissionRecord">AdmissionRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "admission_gpa" : 4.0,
+  "admission_date" : "01-01-2020",
+  "previous_school" : "St. Mary's University",
+  "AdmissionNotes" : "additional notes",
+  "is_foreign" : "0 or 1",
+  "student_id" : "B00123123",
+  "previous_degree" : "Bachelors of Science",
+  "admission_id" : ""
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Admission Created
+        <a href="#AdmissionRecord">AdmissionRecord</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createAwardRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-scholarship/</code></pre></div>
+    <div class="method-summary">creates a student award record (<span class="nickname">createAwardRecord</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createStudentRecord <a href="#createStudentRecord_1">createStudentRecord_1</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a student record. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AwardRecord">AwardRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "scholarship_start_date" : "(mm/dd/yyyy)",
+  "amount" : 7000.0,
+  "scholarship_name" : "Certificate of Excellence",
+  "scholarship_duration" : "12 (in months)",
+  "notes" : "A training program",
+  "student_id" : "B00123123",
+  "scholarship_type" : "Non-monetary award or recognition"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Award Created
+        <a href="#AwardRecord">AwardRecord</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createComps"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-comps/</code></pre></div>
+    <div class="method-summary">creates a student comp record (<span class="nickname">createComps</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createComps <a href="#createComps">createComps</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a comp </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Comps">Comps</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "approval_date" : "(MM/YYYY)",
+  "end_point" : "",
+  "comp_project_id" : 123,
+  "student_id" : "B00123123",
+  "completion_date" : "(MM/YYYY)",
+  "comp_notes" : "Notes on a project",
+  "title" : "Dissertation title"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Comp Created
+        <a href="#Comps">Comps</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createPresentations"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-presentation/</code></pre></div>
+    <div class="method-summary">creates a presentation (<span class="nickname">createPresentations</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createPresentations <a href="#createPresentations">createPresentations</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a student presentation </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Presentations">Presentations</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "student_id" : "B00123123",
+  "information" : "Doe, J. (2001) Presentation Title. Location of poster presentation"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Presentation Created
+        <a href="#Presentations">Presentations</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createProgress"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-progress/</code></pre></div>
+    <div class="method-summary">creates a student progress record (<span class="nickname">createProgress</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createProgress <a href="#createProgress">createProgress</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a student progress record </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Progress">Progress</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "comments" : "Feedback, notes, etc.",
+  "extenstion" : "First/Last/NA",
+  "student_id" : "B00123123",
+  "satisfactory" : "1 or 0",
+  "progress_year" : 2011
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Progress Created
+        <a href="#Progress">Progress</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createPublications"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-publications/</code></pre></div>
+    <div class="method-summary">creates a student publication (<span class="nickname">createPublications</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createPublications <a href="#createPublications">createPublications</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a student publication </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Publications">Publications</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "student_id" : "B00123123",
+  "information" : "Doe, J. (2001) Presentation Title. Location of poster presentation"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Publication Created
+        <a href="#Publications">Publications</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createStatus"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-status-record/</code></pre></div>
+    <div class="method-summary">creates a student status record (<span class="nickname">createStatus</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createStatus <a href="#createStatus">createStatus</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a student status </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Status">Status</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "Internship_Location" : "City children's hospital",
+  "student_id" : "B00123123",
+  "ConsiderForAward_MastersThesis" : "1 or 0",
+  "DefenseDate_PhD" : "(MM/DD/YYYY)",
+  "DefenseDate_MSc" : "(MM/DD/YYYY)",
+  "ConvocationDate_MSc" : "(MM/YYYY)",
+  "CompPlan_CompletionDate" : "(MM/DD/YYYY)",
+  "ConsiderForAward_Dissertation" : "1 or 0",
+  "ConvocationDate_PhD" : "(MM/YYYY)",
+  "Internship_StartDate" : "(M/DD/YYYY)"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Status Created
+        <a href="#Status">Status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createStudentRecordPost"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-student-record/</code></pre></div>
+    <div class="method-summary">creates a student record (<span class="nickname">createStudentRecordPost</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createStudentRecord <a href="#createStudentRecord">createStudentRecord</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a student record. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#StudentRecord">StudentRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "program_type" : "Neuroscience",
+  "degree_type" : "MSC",
+  "gender" : "male",
+  "student_id" : "B00123123",
+  "last_name" : "Smith",
+  "first_name" : "Joe",
+  "email" : "test@testmail.com",
+  "student_photo_id" : "23e4567-e89b-12d3-a456-426655440000"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Record Created
+        <a href="#StudentRecord">StudentRecord</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="createSupervisor"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="post"><code class="huge"><span class="http-method">post</span> /create-supervisor/</code></pre></div>
+    <div class="method-summary">creates a student supervisor (<span class="nickname">createSupervisor</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">createSupervisor <a href="#createSupervisor">createSupervisor</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; creates a supervisor record </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Supervisors">Supervisors</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "co_facutly_role" : "Regular Faculty",
+  "notes" : "null",
+  "co_faculty_last_name" : "Doe",
+  "co_notes" : "null",
+  "student_id" : "B00123123",
+  "faculty_first_name" : "John",
+  "co_faculty_first_name" : "John",
+  "facutly_role" : "Regular Faculty",
+  "faculty_id" : "Fac123",
+  "co_faculty_email" : "john.doe@email.com",
+  "faculty_email" : "john.doe@email.com",
+  "co_faculty_id" : "Fac123",
+  "faculty_last_name" : "Doe"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Supervisor Record Created
+        <a href="#Supervisors">Supervisors</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getAdmissionRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-admission-record/</code></pre></div>
+    <div class="method-summary">returns admission records for a student (<span class="nickname">getAdmissionRecord</span>)</div>
+    <div class="method-notes">By passing in student banner number gets admission records for that student</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's admission record </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AdmissionRecord">AdmissionRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "admission_gpa" : 4.0,
+  "admission_date" : "01-01-2020",
+  "previous_school" : "St. Mary's University",
+  "AdmissionNotes" : "additional notes",
+  "is_foreign" : "0 or 1",
+  "student_id" : "B00123123",
+  "previous_degree" : "Bachelors of Science",
+  "admission_id" : ""
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Student record found
+        <a href="#AdmissionRecord">AdmissionRecord</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Student Record not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getAwardRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-scholarship/</code></pre></div>
+    <div class="method-summary">returns a student's award record (<span class="nickname">getAwardRecord</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+an available award record in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's award record </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AwardRecord">AwardRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "scholarship_start_date" : "(mm/dd/yyyy)",
+  "amount" : 7000.0,
+  "scholarship_name" : "Certificate of Excellence",
+  "scholarship_duration" : "12 (in months)",
+  "notes" : "A training program",
+  "student_id" : "B00123123",
+  "scholarship_type" : "Non-monetary award or recognition"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Award Record Found
+        <a href="#AwardRecord">AwardRecord</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Award Record not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getComps"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-comps/</code></pre></div>
+    <div class="method-summary">returns a student's comps (<span class="nickname">getComps</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+a student's comps in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's comps </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Comps">Comps</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "approval_date" : "(MM/YYYY)",
+  "end_point" : "",
+  "comp_project_id" : 123,
+  "student_id" : "B00123123",
+  "completion_date" : "(MM/YYYY)",
+  "comp_notes" : "Notes on a project",
+  "title" : "Dissertation title"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Comps found
+        <a href="#Comps">Comps</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Comps not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getPresentations"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-presentation/</code></pre></div>
+    <div class="method-summary">returns a student's presentations (<span class="nickname">getPresentations</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+an available presentations in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's presentations </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Presentations">Presentations</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "student_id" : "B00123123",
+  "information" : "Doe, J. (2001) Presentation Title. Location of poster presentation"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Presentations found
+        <a href="#Presentations">Presentations</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Publications not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getProgress"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-progress/</code></pre></div>
+    <div class="method-summary">returns a student's progress (<span class="nickname">getProgress</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+a student's progress in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's progress </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Progress">Progress</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "comments" : "Feedback, notes, etc.",
+  "extenstion" : "First/Last/NA",
+  "student_id" : "B00123123",
+  "satisfactory" : "1 or 0",
+  "progress_year" : 2011
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Progress found
+        <a href="#Progress">Progress</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Progress not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getPublications"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-publications/</code></pre></div>
+    <div class="method-summary">returns a student's publications (<span class="nickname">getPublications</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+an available publication in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's publications </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Publications">Publications</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "student_id" : "B00123123",
+  "information" : "Doe, J. (2001) Presentation Title. Location of poster presentation"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Publications found
+        <a href="#Publications">Publications</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Publications not foun
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getStatus"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-status-record/</code></pre></div>
+    <div class="method-summary">returns a student's status (<span class="nickname">getStatus</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+a student's status in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's status </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Status">Status</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "Internship_Location" : "City children's hospital",
+  "student_id" : "B00123123",
+  "ConsiderForAward_MastersThesis" : "1 or 0",
+  "DefenseDate_PhD" : "(MM/DD/YYYY)",
+  "DefenseDate_MSc" : "(MM/DD/YYYY)",
+  "ConvocationDate_MSc" : "(MM/YYYY)",
+  "CompPlan_CompletionDate" : "(MM/DD/YYYY)",
+  "ConsiderForAward_Dissertation" : "1 or 0",
+  "ConvocationDate_PhD" : "(MM/YYYY)",
+  "Internship_StartDate" : "(M/DD/YYYY)"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Student status found
+        <a href="#Status">Status</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Student status not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getStudentRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-student-record/</code></pre></div>
+    <div class="method-summary">returns a student record (<span class="nickname">getStudentRecord</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+an available student record in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's record </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#StudentRecord">StudentRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "program_type" : "Neuroscience",
+  "degree_type" : "MSC",
+  "gender" : "male",
+  "student_id" : "B00123123",
+  "last_name" : "Smith",
+  "first_name" : "Joe",
+  "email" : "test@testmail.com",
+  "student_photo_id" : "23e4567-e89b-12d3-a456-426655440000"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Student Record Found
+        <a href="#StudentRecord">StudentRecord</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Student Record not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="getSupervisors"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="get"><code class="huge"><span class="http-method">get</span> /get-supervisors/</code></pre></div>
+    <div class="method-summary">returns a student's supervisors (<span class="nickname">getSupervisors</span>)</div>
+    <div class="method-notes">By passing in the student student_Id (banner number) you can search for
+a student's supervisors in the system</div>
+
+
+
+
+
+    <h3 class="field-label">Query parameters</h3>
+    <div class="field-items">
+      <div class="param">student_id (required)</div>
+
+      <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; pass in the banner number/student id to retrieve that student's supervisors </div>
+    </div>  <!-- field-items -->
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Supervisors">Supervisors</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "co_facutly_role" : "Regular Faculty",
+  "notes" : "null",
+  "co_faculty_last_name" : "Doe",
+  "co_notes" : "null",
+  "student_id" : "B00123123",
+  "faculty_first_name" : "John",
+  "co_faculty_first_name" : "John",
+  "facutly_role" : "Regular Faculty",
+  "faculty_id" : "Fac123",
+  "co_faculty_email" : "john.doe@email.com",
+  "faculty_email" : "john.doe@email.com",
+  "co_faculty_id" : "Fac123",
+  "faculty_last_name" : "Doe"
+}</code></pre>
+
+    <h3 class="field-label">Produces</h3>
+    This API call produces the following media types according to the <span class="header">Accept</span> request header;
+    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">200</h4>
+    Supervisors found
+        <a href="#Supervisors">Supervisors</a>
+    <h4 class="field-label">400</h4>
+    Invalid ID supplied
+        <a href="#"></a>
+    <h4 class="field-label">404</h4>
+    Supervisors not found
+        <a href="#"></a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateAdmissionRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-admission-record/</code></pre></div>
+    <div class="method-summary">updates a student admission record (<span class="nickname">updateAdmissionRecord</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateAdmissionRecord <a href="#updateAdmissionRecord">updateAdmissionRecord</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AdmissionRecord">AdmissionRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "admission_gpa" : 4.0,
+  "admission_date" : "01-01-2020",
+  "previous_school" : "St. Mary's University",
+  "AdmissionNotes" : "additional notes",
+  "is_foreign" : "0 or 1",
+  "student_id" : "B00123123",
+  "previous_degree" : "Bachelors of Science",
+  "admission_id" : ""
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Admission Updated
+        <a href="#AdmissionRecord">AdmissionRecord</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateAwardRecord"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-scholarship/</code></pre></div>
+    <div class="method-summary">update a student award record (<span class="nickname">updateAwardRecord</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateStudentRecord <a href="#updateStudentRecord_1">updateStudentRecord_1</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a student record. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#AwardRecord">AwardRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "scholarship_start_date" : "(mm/dd/yyyy)",
+  "amount" : 7000.0,
+  "scholarship_name" : "Certificate of Excellence",
+  "scholarship_duration" : "12 (in months)",
+  "notes" : "A training program",
+  "student_id" : "B00123123",
+  "scholarship_type" : "Non-monetary award or recognition"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Award Updated
+        <a href="#AwardRecord">AwardRecord</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateComps"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-comps/</code></pre></div>
+    <div class="method-summary">update a student comp record (<span class="nickname">updateComps</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateComps <a href="#updateComps">updateComps</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a comp </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Comps">Comps</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "approval_date" : "(MM/YYYY)",
+  "end_point" : "",
+  "comp_project_id" : 123,
+  "student_id" : "B00123123",
+  "completion_date" : "(MM/YYYY)",
+  "comp_notes" : "Notes on a project",
+  "title" : "Dissertation title"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Comp Updated
+        <a href="#Comps">Comps</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updatePresentations"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-presentation/</code></pre></div>
+    <div class="method-summary">Updates a presentation (<span class="nickname">updatePresentations</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updatePresentations <a href="#updatePresentations">updatePresentations</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a student presentation </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Presentations">Presentations</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "student_id" : "B00123123",
+  "information" : "Doe, J. (2001) Presentation Title. Location of poster presentation"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Presentation Updated
+        <a href="#Presentations">Presentations</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateProgress"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-progress/</code></pre></div>
+    <div class="method-summary">updates a student progress record (<span class="nickname">updateProgress</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateProgress <a href="#updateProgress">updateProgress</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a student progress record </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Progress">Progress</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "comments" : "Feedback, notes, etc.",
+  "extenstion" : "First/Last/NA",
+  "student_id" : "B00123123",
+  "satisfactory" : "1 or 0",
+  "progress_year" : 2011
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Progress Updated
+        <a href="#Progress">Progress</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updatePublications"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-publications/</code></pre></div>
+    <div class="method-summary">updates a student publication (<span class="nickname">updatePublications</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updatePublications <a href="#updatePublications">updatePublications</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; upsates a student publication </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Publications">Publications</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "student_id" : "B00123123",
+  "information" : "Doe, J. (2001) Presentation Title. Location of poster presentation"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Publication Updated
+        <a href="#Publications">Publications</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateStatus"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-status-record/</code></pre></div>
+    <div class="method-summary">updates a student status record (<span class="nickname">updateStatus</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateStatus <a href="#updateStatus">updateStatus</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a student status </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Status">Status</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "Internship_Location" : "City children's hospital",
+  "student_id" : "B00123123",
+  "ConsiderForAward_MastersThesis" : "1 or 0",
+  "DefenseDate_PhD" : "(MM/DD/YYYY)",
+  "DefenseDate_MSc" : "(MM/DD/YYYY)",
+  "ConvocationDate_MSc" : "(MM/YYYY)",
+  "CompPlan_CompletionDate" : "(MM/DD/YYYY)",
+  "ConsiderForAward_Dissertation" : "1 or 0",
+  "ConvocationDate_PhD" : "(MM/YYYY)",
+  "Internship_StartDate" : "(M/DD/YYYY)"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Status Updated
+        <a href="#Status">Status</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateStudentRecordPut"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-student-record/</code></pre></div>
+    <div class="method-summary">updates a student record (<span class="nickname">updateStudentRecordPut</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateStudentRecord <a href="#updateStudentRecord">updateStudentRecord</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a student record. </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#StudentRecord">StudentRecord</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "program_type" : "Neuroscience",
+  "degree_type" : "MSC",
+  "gender" : "male",
+  "student_id" : "B00123123",
+  "last_name" : "Smith",
+  "first_name" : "Joe",
+  "email" : "test@testmail.com",
+  "student_photo_id" : "23e4567-e89b-12d3-a456-426655440000"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Student Record updated
+        <a href="#StudentRecord">StudentRecord</a>
+  </div> <!-- method -->
+  <hr/>
+  <div class="method"><a name="updateSupervisor"/>
+    <div class="method-path">
+    <a class="up" href="#__Methods">Up</a>
+    <pre class="put"><code class="huge"><span class="http-method">put</span> /update-supervisor/</code></pre></div>
+    <div class="method-summary">updates a student supervisor (<span class="nickname">updateSupervisor</span>)</div>
+    <div class="method-notes"></div>
+
+
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
+    <ul>
+      <li><code>application/json</code></li>
+    </ul>
+
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">updateSupervisor <a href="#updateSupervisor">updateSupervisor</a> (optional)</div>
+
+      <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash; updates a supervisor record </div>
+
+    </div>  <!-- field-items -->
+
+
+
+
+    <h3 class="field-label">Return type</h3>
+    <div class="return-type">
+      <a href="#Supervisors">Supervisors</a>
+      
+    </div>
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+    <h3 class="field-label">Example data</h3>
+    <div class="example-data-content-type">Content-Type: application/json</div>
+    <pre class="example"><code>{
+  "co_facutly_role" : "Regular Faculty",
+  "notes" : "null",
+  "co_faculty_last_name" : "Doe",
+  "co_notes" : "null",
+  "student_id" : "B00123123",
+  "faculty_first_name" : "John",
+  "co_faculty_first_name" : "John",
+  "facutly_role" : "Regular Faculty",
+  "faculty_id" : "Fac123",
+  "co_faculty_email" : "john.doe@email.com",
+  "faculty_email" : "john.doe@email.com",
+  "co_faculty_id" : "Fac123",
+  "faculty_last_name" : "Doe"
+}</code></pre>
+
+
+    <h3 class="field-label">Responses</h3>
+    <h4 class="field-label">201</h4>
+    Supervisor Record updated
+        <a href="#Supervisors">Supervisors</a>
+  </div> <!-- method -->
+  <hr/>
+
+  <h2><a name="__Models">Models</a></h2>
+  [ Jump to <a href="#__Methods">Methods</a> ]
+
+  <h3>Table of Contents</h3>
+  <ol>
+    <li><a href="#AdmissionRecord"><code>AdmissionRecord</code> - </a></li>
+    <li><a href="#AwardRecord"><code>AwardRecord</code> - </a></li>
+    <li><a href="#Comps"><code>Comps</code> - </a></li>
+    <li><a href="#Presentations"><code>Presentations</code> - </a></li>
+    <li><a href="#Progress"><code>Progress</code> - </a></li>
+    <li><a href="#Publications"><code>Publications</code> - </a></li>
+    <li><a href="#Status"><code>Status</code> - </a></li>
+    <li><a href="#StudentRecord"><code>StudentRecord</code> - </a></li>
+    <li><a href="#Supervisors"><code>Supervisors</code> - </a></li>
+    <li><a href="#createAdmissionRecord"><code>createAdmissionRecord</code> - </a></li>
+    <li><a href="#createComps"><code>createComps</code> - </a></li>
+    <li><a href="#createPresentations"><code>createPresentations</code> - </a></li>
+    <li><a href="#createProgress"><code>createProgress</code> - </a></li>
+    <li><a href="#createPublications"><code>createPublications</code> - </a></li>
+    <li><a href="#createStatus"><code>createStatus</code> - </a></li>
+    <li><a href="#createStudentRecord"><code>createStudentRecord</code> - </a></li>
+    <li><a href="#createStudentRecord_1"><code>createStudentRecord_1</code> - </a></li>
+    <li><a href="#createSupervisor"><code>createSupervisor</code> - </a></li>
+    <li><a href="#updateAdmissionRecord"><code>updateAdmissionRecord</code> - </a></li>
+    <li><a href="#updateComps"><code>updateComps</code> - </a></li>
+    <li><a href="#updatePresentations"><code>updatePresentations</code> - </a></li>
+    <li><a href="#updateProgress"><code>updateProgress</code> - </a></li>
+    <li><a href="#updatePublications"><code>updatePublications</code> - </a></li>
+    <li><a href="#updateStatus"><code>updateStatus</code> - </a></li>
+    <li><a href="#updateStudentRecord"><code>updateStudentRecord</code> - </a></li>
+    <li><a href="#updateStudentRecord_1"><code>updateStudentRecord_1</code> - </a></li>
+    <li><a href="#updateSupervisor"><code>updateSupervisor</code> - </a></li>
+  </ol>
+
+  <div class="model">
+    <h3><a name="AdmissionRecord"><code>AdmissionRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">admission_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: </span></div>
+<div class="param">admission_date </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 01-01-2020</span></div>
+<div class="param">is_foreign (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 0 or 1</span></div>
+<div class="param">previous_degree (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Bachelors of Science</span></div>
+<div class="param">previous_school (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: St. Mary's University</span></div>
+<div class="param">admission_gpa (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 4.0</span></div>
+<div class="param">AdmissionNotes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: additional notes</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="AwardRecord"><code>AwardRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">scholarship_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Certificate of Excellence</span></div>
+<div class="param">scholarship_type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Non-monetary award or recognition</span></div>
+<div class="param">scholarship_start_date </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (mm/dd/yyyy)</span></div>
+<div class="param">amount </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 7000.0</span></div>
+<div class="param">scholarship_duration </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 12 (in months)</span></div>
+<div class="param">notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: A training program</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Comps"><code>Comps</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">comp_project_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 123</span></div>
+<div class="param">end_point (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: </span></div>
+<div class="param">title (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Dissertation title</span></div>
+<div class="param">approval_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/YYYY)</span></div>
+<div class="param">completion_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/YYYY)</span></div>
+<div class="param">comp_notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Notes on a project</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Presentations"><code>Presentations</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">information (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Doe, J. (2001) Presentation Title. Location of poster presentation</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Progress"><code>Progress</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">progress_year (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 2011</span></div>
+<div class="param">satisfactory (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 1 or 0</span></div>
+<div class="param">extenstion (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: First/Last/NA</span></div>
+<div class="param">comments (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Feedback, notes, etc.</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Publications"><code>Publications</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">information (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Doe, J. (2001) Presentation Title. Location of poster presentation</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Status"><code>Status</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">DefenseDate_MSc (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/DD/YYYY)</span></div>
+<div class="param">DefenseDate_PhD </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/DD/YYYY)</span></div>
+<div class="param">ConsiderForAward_MastersThesis (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 1 or 0</span></div>
+<div class="param">ConsiderForAward_Dissertation (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 1 or 0</span></div>
+<div class="param">ConvocationDate_PhD (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/YYYY)</span></div>
+<div class="param">ConvocationDate_MSc (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/YYYY)</span></div>
+<div class="param">CompPlan_CompletionDate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (MM/DD/YYYY)</span></div>
+<div class="param">Internship_StartDate </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: (M/DD/YYYY)</span></div>
+<div class="param">Internship_Location (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: City children's hospital</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="StudentRecord"><code>StudentRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">first_name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Joe</span></div>
+<div class="param">last_name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Smith</span></div>
+<div class="param">email </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: test@testmail.com</span></div>
+<div class="param">gender (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: male</span></div>
+<div class="param">degree_type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: MSC</span></div>
+<div class="param">program_type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Neuroscience</span></div>
+<div class="param">student_photo_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: 23e4567-e89b-12d3-a456-426655440000</span></div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="Supervisors"><code>Supervisors</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    <div class='model-description'></div>
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: B00123123</span></div>
+<div class="param">faculty_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Fac123</span></div>
+<div class="param">faculty_first_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: John</span></div>
+<div class="param">faculty_last_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Doe</span></div>
+<div class="param">faculty_email (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: john.doe@email.com</span></div>
+<div class="param">facutly_role (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Regular Faculty</span></div>
+<div class="param">notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">co_faculty_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Fac123</span></div>
+<div class="param">co_faculty_first_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: John</span></div>
+<div class="param">co_faculty_last_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Doe</span></div>
+<div class="param">co_faculty_email (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: john.doe@email.com</span></div>
+<div class="param">co_facutly_role (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+          <div class="param-desc"><span class="param-type">example: Regular Faculty</span></div>
+<div class="param">co_notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createAdmissionRecord"><code>createAdmissionRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">admission_date </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">is_foreign </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">previous_degree (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">previous_school (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">admission_gpa (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createComps"><code>createComps</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">end_point (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">title (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">approval_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">completion_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">comp_notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createPresentations"><code>createPresentations</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">information (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createProgress"><code>createProgress</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">progress_year (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">satisfactory (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">extenstion (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">comments (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createPublications"><code>createPublications</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">information (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createStatus"><code>createStatus</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">DefenseDate_MSc (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">DefenseDate_PhD </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">ConsiderForAward_MastersThesis (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">ConsiderForAward_Dissertation (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">ConvocationDate_PhD (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">ConvocationDate_MSc (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">CompPlan_CompletionDate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">Internship_StartDate </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">Internship_Location (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createStudentRecord"><code>createStudentRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">first_name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">last_name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">email </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">gender (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">degree_type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">program_type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">student_photo_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createStudentRecord_1"><code>createStudentRecord_1</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">scholarship_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">scholarship_type </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">scholarship_start_date </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">amount </div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+<div class="param">scholarship_duration </div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="createSupervisor"><code>createSupervisor</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_id </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_first_name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_last_name </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_email (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">facutly_role (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateAdmissionRecord"><code>updateAdmissionRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">admission_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">is_foreign (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">previous_degree (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">previous_school (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">admission_gpa (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateComps"><code>updateComps</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">end_point (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">title (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">approval_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">completion_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">comp_notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updatePresentations"><code>updatePresentations</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">information (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateProgress"><code>updateProgress</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">progress_year (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">satisfactory (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">extenstion (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">comments (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updatePublications"><code>updatePublications</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">information (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateStatus"><code>updateStatus</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">DefenseDate_MSc (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">DefenseDate_PhD (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">ConsiderForAward_MastersThesis (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">ConsiderForAward_Dissertation (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">ConvocationDate_PhD (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">ConvocationDate_MSc (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">CompPlan_CompletionDate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">Internship_StartDate (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">Internship_Location (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateStudentRecord"><code>updateStudentRecord</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">first_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">last_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">email (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">gender (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">degree_type (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">program_type (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">student_photo_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateStudentRecord_1"><code>updateStudentRecord_1</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">scholarship_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">scholarship_type (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">scholarship_start_date (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">amount (optional)</div><div class="param-desc"><span class="param-type"><a href="#number">BigDecimal</a></span>  </div>
+<div class="param">scholarship_duration (optional)</div><div class="param-desc"><span class="param-type"><a href="#integer">Integer</a></span>  </div>
+<div class="param">notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  <div class="model">
+    <h3><a name="updateSupervisor"><code>updateSupervisor</code> - </a> <a class="up" href="#__Models">Up</a></h3>
+    
+    <div class="field-items">
+      <div class="param">student_id (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_first_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_last_name (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">faculty_email (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">facutly_role (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+<div class="param">notes (optional)</div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span>  </div>
+    </div>  <!-- field-items -->
+  </div>
+  </body>
+</html>
