@@ -1,3 +1,5 @@
+[![Board Status](https://dev.azure.com/x691w21d1/242d51e0-eb18-4ceb-941f-468ee7abe630/2e43c3d5-a92c-4f5e-9029-48ae374c6b92/_apis/work/boardbadge/6313a900-19bb-4b09-92a8-44f2890d512c?columnOptions=1)](https://dev.azure.com/x691w21d1/242d51e0-eb18-4ceb-941f-468ee7abe630/_boards/board/t/2e43c3d5-a92c-4f5e-9029-48ae374c6b92/Microsoft.RequirementCategory/)
+
 # How to initialize the backend
 
 1. Clone repo in to local repository.
