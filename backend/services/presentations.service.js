@@ -1,28 +1,28 @@
 const {
-    getPresentationByStudentId,
-    insertPresentation,
-    updatePresentation
-  } = require('../model/presentations.model');
-  
-  const getPresentation = async (studentId) => {
-    try {
-      const presentation = await getPresentationByStudentId(studentId);
-      return presentation;
-    } catch (error) {
-      console.log(error);
-    }
-  }
+	getPresentationByStudentId,
+	insertPresentation,
+	updatePresentation
+} = require('../model/presentations.model');
 
-  const insertStudentPresentation = async (presentation) => {
-    await insertPresentation(presentation);
-  }
+const getPresentation = async(studentId) => {
+	try {
+		const presentation = await getPresentationByStudentId(studentId);
+		return presentation;
+	} catch(error) {
+		console.log(error);
+	}
+}
 
-  const updatePresentationRecord = async (presentation, studentId ) => {
-    await updatePresentation (presentation, studentId);
-  }
+const insertStudentPresentation = async(presentation) => {
+	await insertPresentation(presentation);
+}
 
-  module.exports = {
-    getPresentation,
-    insertStudentPresentation,
-    updatePresentationRecord
-  }
+const updatePresentationRecord = async(presentation, studentId) => {
+	await updatePresentation(presentation, studentId);
+}
+
+module.exports = {
+	getPresentation,
+	insertStudentPresentation,
+	updatePresentationRecord
+}
