@@ -4,24 +4,24 @@
 // The client secret, and client id will be stored using .env variables. 
 // Going forward this must be changed to the 'Implicit Grant Flow' methodology of using Auth0 when a frontend is added.
 
+// TODO: Change to Implicit Grant Flow
+
 var jwt = require('express-jwt');
 var jwks = require('jwks-rsa');
 
 var auth = jwt({
-  secret: jwks.expressJwtSecret({
-    cache: true,
-    rateLimit: true,
-    jwksRequestsPerMinute: 5,
-    jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
-  }),
+	secret: jwks.expressJwtSecret({
+		cache: true,
+		rateLimit: true,
+		jwksRequestsPerMinute: 5,
+		jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`
+	}),
 
-  // Validate the audience and the issuer.
-  audience: process.env.AUTH0_AUDIENCE,
-  issuer: `https://${process.env.AUTH0_DOMAIN}/`,
-  algorithms: ['RS256']
+	// Validate the audience and the issuer.
+	audience: process.env.AUTH0_AUDIENCE,
+	issuer: `https://${process.env.AUTH0_DOMAIN}/`,
+	algorithms: ['RS256']
 });
-
-
 
 
 module.exports = auth;
