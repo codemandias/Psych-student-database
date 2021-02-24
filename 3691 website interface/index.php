@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/main.css">
-</head>
+<?php
+    $parentFile = "Database Entry"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
+    require 'includes/header.php';
+    ?>
 <body>
 
 <div class="sidebar">
@@ -17,7 +15,7 @@
 </div>
 
 <div id="content">
-  <div class = "contentLeft">	
+  <div class = "contentLeft">
   <h3>Student Information</h3>
   <form method="get" action="">
   				<p id = "row">
@@ -37,7 +35,7 @@
   					<input type="radio" id="clinical" name = "program" value="clinical"> <label for="programLabel"> Clinical</label>
   					<input type="radio" id="neuro" name="program" value="neuroscience"><label for="programLabel"> Neuroscience</label>
   					<input type="radio" id="psych" name="program" value="psychology"><label for="programLabel"> Psychology</label><br><br>
-  				<label for="studentSupervisor">*Supervisor(F/L): </label>  
+  				<label for="studentSupervisor">*Supervisor(F/L): </label>
   					<select name="studentSlutations" id="salutations">
     					<option value="mr">Mr.</option>
     					<option value="miss">Miss</option>
@@ -60,20 +58,20 @@
   					<input type="radio" id="yesID" name = "dep" value="yes"> <label for="depLabel"> Yes</label>
   					<input type="radio" id="noID" name="dep" value="no"><label for="depLabel"> No</label><br><br>
   				<label for="studentDetails">*Date of transfer from our MSc to PhD: </label>
-  					<input type="text" id="transferDateField" name="transferDate"><br><br>	
+  					<input type="text" id="transferDateField" name="transferDate"><br><br>
   				<label for="studentDetails">Transfer Number: </label>
   					<input type="text" id="transferNoField" name="transferNo"><br><br>
   				<label for="studentDetails">Number of months off MSc to PhD: </label>
-  					<input type="text" id="monthsOffField" name="monthsOff"><br><br>	
+  					<input type="text" id="monthsOffField" name="monthsOff"><br><br>
   				<label for="studentDetails">*Additional residency required? </label></label>
   					<input type="radio" id="yesID" name = "yes" value="yes"> <label for="yesLabel"> Yes</label>
   					<input type="radio" id="noID" name="no" value="no"><label for="noLabel"> No</label><br><br>
   				<label for="studentDetails">*Most recent degree (Excluding our MSc): </label>
-  					<input type="text" id="recentDegree"><br><br>	
+  					<input type="text" id="recentDegree"><br><br>
    				<label for="studentDetails">*Most recent school (Excluding our MSc): </label>
-  					<input type="text" id="recentSchool"><br><br>	
+  					<input type="text" id="recentSchool"><br><br>
   				<label for="studentDetails">*Admission GPA: </label>
-  					<input type="text" id="admissionGPA"><br><br>	
+  					<input type="text" id="admissionGPA"><br><br>
   				<p id = "row">
   				<label for="sInfo">*GPA based on final transcript (score): </label>
   					<input type="text" id="finalGPA"><br><br>
@@ -149,7 +147,7 @@
   				<input type="reset" value="Cancel" id=cancelButton>
   </form>
   </div>
- </div> 
+ </div>
 
 </body>
 </html>
