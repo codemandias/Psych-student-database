@@ -1,11 +1,11 @@
 <?php
-    $parentFile = "Database Entry"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
-    require 'includes/header.php';
+    $parentFile = "Admission"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
+    require 'header.php';
     ?>
 <body>
-
 <div class="sidebar">
-  <a class="active" href="#Admission">Admission</a>
+  <a href="../database-entry.php">Database Entry</a>  
+  <a class="active" href="../index.php">Admission</a>
   <a href="#Awards">Awards</a>
   <a href="#Comps">Comps</a>
   <a href="#Publications">Publications</a>
@@ -64,8 +64,8 @@
   				<label for="studentDetails">Number of months off MSc to PhD: </label>
   					<input type="text" id="monthsOffField" name="monthsOff"><br><br>
   				<label for="studentDetails">*Additional residency required? </label></label>
-  					<input type="radio" id="yesID" name = "yes" value="yes"> <label for="yesLabel"> Yes</label>
-  					<input type="radio" id="noID" name="no" value="no"><label for="noLabel"> No</label><br><br>
+  					<input type="radio" id="yesID" name = "resRequired" value="yes"> <label for="resLabel"> Yes</label>
+  					<input type="radio" id="noID" name="resRequired" value="no"><label for="resLabel"> No</label><br><br>
   				<label for="studentDetails">*Most recent degree (Excluding our MSc): </label>
   					<input type="text" id="recentDegree"><br><br>
    				<label for="studentDetails">*Most recent school (Excluding our MSc): </label>
