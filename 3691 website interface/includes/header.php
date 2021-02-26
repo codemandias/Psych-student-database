@@ -16,7 +16,7 @@ echo "
             <header>
                 <nav>
                     <div>
-                        <input class='navbar_Logo' type='image' src='images/dalLogo.jpg'  onclick='location.href=\"homepage.php\"'/>   
+                        <input class='navbar_Logo' type='image' src='images/dalLogo.jpg' onclick='location.href=\"homepage.php\"'/>   
                         <h1 class='navbar_Header'>$headerName</h1>
                     </div>
                         <hr class='navbar_Hr'/>
