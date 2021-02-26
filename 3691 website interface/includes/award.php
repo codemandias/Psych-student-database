@@ -1,5 +1,5 @@
 <?php
-    $parentFile = "Admission"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
+    $parentFile = "Award"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
     require 'header.php';
     ?>
 <body>
