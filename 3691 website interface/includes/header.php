@@ -1,8 +1,6 @@
 <?php
 if (isset($parentFile)) {
     $headerName = $parentFile;
-}else{
-    $headerName = "Header";
 }
 else{
     $headerName = "Psycology Graduate Database";

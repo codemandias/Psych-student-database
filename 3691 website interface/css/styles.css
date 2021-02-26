@@ -1,14 +1,10 @@
 .navbar_Header {
     font-family: "Avenir", sans-serif;
     font-size: 30px;
-<<<<<<< HEAD
     margin-bottom: 5px;
     margin-top: 2px;
     clear: none;
     padding-top: 25px; /*set to 20px for logo aligned with HR*/
-=======
-    display: inline;
->>>>>>> 842ffdbb0568768919cc1c8d6a1e68abe9417436
 }
 
 .navbar_Hr {
