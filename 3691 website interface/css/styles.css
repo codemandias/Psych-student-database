@@ -1,6 +1,10 @@
 .navbar_Header {
     font-family: "Avenir", sans-serif;
     font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    clear: none;
+    padding-top: 25px; /*set to 20px for logo aligned with HR*/
 }
 
 .navbar_Hr {
@@ -10,7 +14,14 @@
 
 .navbar_Logo {
     height: 69px;
+    margin-bottom: 1em;
+    padding-top: 6px;
+    float: left;
 
+}
+
+header {
+    padding-bottom: 5px;
 }
 
 body {
