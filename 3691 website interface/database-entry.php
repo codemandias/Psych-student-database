@@ -7,7 +7,7 @@
 <div class="sidebar">
   <a class="active" href="#Database-Entry">Database Entry</a>
   <a href='../3691 website interface/includes/admission.php'>Admission</a>
-  <a href="#Awards">Awards</a>
+  <a href="../3691 website interface/includes/award.php">Awards</a>
   <a href="#Comps">Comps</a>
   <a href="#Publications">Publications</a>
   <a href="#Presentation">Presentation</a>
