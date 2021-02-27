@@ -51,7 +51,7 @@ require 'header.php';
             <h3>Academic Information</h3>
 
             <label for="studentDetails">*Date of Admission: </label>
-            <input type="text" id="admissionField" name="admission"><br><br>
+            <input type="date" id="admission" name="admissionDate" value="- -" min="2000-01-01" required><br><br>
             <label for="studentDetails">*Foreign (Non-Canadian) Student?: </label>
             <input type="radio" id="yesID" name="foreign" value="yes"> <label for="nonCanLabel"> Yes</label>
             <input type="radio" id="noID" name="foreign" value="no"><label for="nonCanLabel"> No</label><br><br>
@@ -86,13 +86,21 @@ require 'header.php';
             </p>
     </div>
     <div class="contentIMG">
-        <input type="file" id="myfile" name="myfile"><br><br>
+        <img id="admissionProfile" width="200" />	
+        <input type="file" id="myfile" onchange="loadFile(event)" name="myfile"><br><br>
     </div>
     <div class="contentRight">
         <p id="row">
             <label for="gre">*GRE scaled score Verbal: </label>
             <input type="text" id="gre">
             <label for="percentile"> (percentile): </label>
+            <input type="text" id="percentile"><br><br>
+        </p>
+
+        <p id="row">
+            <label for="gre">Verbal: </label>
+            <input type="text" id="gre">
+            <label for="percentile"> </label>
             <input type="text" id="percentile"><br><br>
         </p>
 
@@ -154,5 +162,7 @@ require 'header.php';
   </div>
  </div>
  </body>
-
+ <?php
+     require 'footer.php';
+ ?>
 </html>
