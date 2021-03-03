@@ -158,19 +158,18 @@ footer {
     border: 1px solid #626567;
 }
 
-#content {
+.content {
     display: flex;
-    margin-left: 210px;
-}
-
-.contentTable {
-    margin-left: 210px;
 }
 
 .contentRight {
     float: right;
     margin-top: 370px;
     margin-left: 50px;
+}
+
+.contentTable {
+    margin-left: 210px;
 }
 
 .sidebar {
