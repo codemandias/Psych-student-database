@@ -34,6 +34,12 @@ else {
             <h1 class='navbar_Header'><?php echo $headerName;?></h1>
         </div>
         <hr class='navbar_Hr'/>
+        <div class="navbar_PageLinks">
+            <a href="database-entry.php">Add a Student</a>
+            <a href="homepage.php">Find a Student</a>
+            <a href="databaseviewer.php">Database Viewer</a>
+            <a href="calculations.php">Calculations</a>
+        </div>
     </nav>
 </header>
 </body>
