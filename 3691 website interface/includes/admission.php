@@ -7,7 +7,7 @@ require 'header.php';
           <a href="../database-entry.php">Database Entry</a>
           <a class="active" href="../3691 website interface/includes/admission.php">Admission</a>
           <a href="../includes/award.php">Awards</a>
-          <a href="#Comps">Comps</a>
+          <a href="../includes/comps.php">Comps</a>
           <a href="#Publications">Publications</a>
           <a href="#Presentation">Presentation</a>
           <a href="#Progress">Progress</a>
