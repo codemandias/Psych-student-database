@@ -1,5 +1,5 @@
 .head{
-    padding-bottom: 0px ;
+    padding-bottom: 0;
 }
 .navbar_Header {
     font-family: "Avenir", sans-serif;
@@ -11,7 +11,7 @@
 }
 
 .navbar_Hr {
-    margin: 0px -20px;
+    margin: 0 -20px;
     border-top: 1px solid #ba890c;
 }
 
@@ -86,7 +86,7 @@ label[for=sInfo] {
     display: table-cell;
 }
 
-label[for=percentile] {fg
+label[for=percentile] {
     display: table-cell;
 }
 
