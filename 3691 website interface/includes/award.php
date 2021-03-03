@@ -13,11 +13,10 @@
             <a href="#Progress">Progress</a>
             <a href="#Status">Status</a>
         </div>
-
-        <div id="content">
+            <form method="get" action="">
+            <div class="content">
             <div class = "contentLeft">
                 <h3>Student Information</h3>
-                <form method="get" action="">
                     <p id = "row">
                         <label for="sInfo">*Student(First/Last): </label>
                             <input type="text" id="nameField" name="firstName" required >
