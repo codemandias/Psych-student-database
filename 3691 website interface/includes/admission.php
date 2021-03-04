@@ -1,6 +1,6 @@
 <?php
-$parentFile = "Data Entry"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
-require 'header.php';
+    $parentFile = "Data Entry"; //$parentFile is used to find what file called includes header so header cna be set to file name. DO NOT EDIT
+    require 'header.php';
 ?>
     <body>
         <div class="sidebar">
@@ -11,7 +11,7 @@ require 'header.php';
           <a href="#Publications">Publications</a>
           <a href="#Presentation">Presentation</a>
           <a href="#Progress">Progress</a>
-          <a href="#Status">Status</a>
+          <a href="../includes/status.php">Status</a>
         </div>
 
         <form method="get" action="">
@@ -166,7 +166,7 @@ require 'header.php';
             </div>
         </form>
     </body>
-    <?php
-        require 'footer.php';
-    ?>
-</html>
+<?php
+    require 'footer.php';
+?>
+

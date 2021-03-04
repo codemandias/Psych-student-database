@@ -11,7 +11,7 @@
             <a href="#Publications">Publications</a>
             <a href="#Presentation">Presentation</a>
             <a href="#Progress">Progress</a>
-            <a href="#Status">Status</a>
+            <a href="../includes/status.php">Status</a>
         </div>
             <form method="get" action="">
             <div class="content">
@@ -143,4 +143,4 @@
     <?php
          require 'footer.php';
     ?>
-</html>
+
