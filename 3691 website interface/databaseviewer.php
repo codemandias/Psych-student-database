@@ -76,9 +76,9 @@ require 'includes/header.php';
             ?>
         </table>
     </div>
-    <?php
-    require 'includes/footer.php';
-    ?>
-</body>
 
+</body>
+<?php
+require 'includes/footer.php';
+?>
 </html>
