@@ -67,7 +67,10 @@ h3 {
     position: absolute;
     margin-top: 200px;
 }
-
+#search{
+    width:200px;
+    height: 10px;
+}
 #admissionProfile {
     margin-left: 385px;
     position: absolute;

@@ -6,12 +6,15 @@ require 'includes/header.php';
 
 <body>
     <div class="sidebar">
-        <button class="button-sidebar" type="button">Show all students</button>
-        <button class="button-sidebar" type="button">Show by semester</button>
-        <button class="button-sidebar" type="button">Show by program</button>
-        <button class="button-sidebar" type="button">Show by degree</button>
+      <form>
+        <input type="submit" name="show_all_student" value="Show all students"/>
+        <input type="submit" name="show_by_semmester" value="Show by semester"/>
+        <input type="submit" name="show_by_program" value="Show by program"/>
+        <input type="submit" name="show_by_degree" value="Show by degree"/>
+      </form>
     </div>
     <div class="contentTable">
+        <input type="text" id="search" name="search" placeholder="search" required >
         <table class="mytable">
             <tr>
                 <th>Student Name</th>
