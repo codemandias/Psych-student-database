@@ -15,15 +15,17 @@
     border-top: 1px solid #ba890c;
 }
 input[type=submit] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
+    background-color: #626567;
+    border: none;color: white;
+    padding: 16px 32px;
+    text-decoration: none;margin: 4px 2px;
+    cursor: pointer;margin-top:20px;
 }
-
+#search {
+  width:70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .navbar_PageLinks {
     margin: 0;
@@ -160,11 +162,13 @@ footer {
 .mytable th {
     background-color: #626567;
     color: white;
+    padding: 10px;
+    border: 1px solid #626567;
 }
 
-.mytable td,
-.mytable th {
+.mytable td {
     padding: 10px;
+    background-color: white;
     border: 1px solid #626567;
 }
 

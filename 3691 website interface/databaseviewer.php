@@ -7,14 +7,14 @@ require 'includes/header.php';
 <body>
     <div class="sidebar">
         <form method="post">
-            <input type="submit" name="show_all_student" value="Show all students"style="background-color: #626567; border: none;color: white;padding: 16px 32px;text-decoration: none;margin: 4px 2px;cursor: pointer;margin-top:20px;" />
-            <input type="submit" name="show_by_semmester" value="Show by semester" style="background-color: #626567; border: none;color: white;padding: 16px 32px;text-decoration: none;margin: 4px 2px;cursor: pointer;margin-top:20px;"/>
-            <input type="submit" name="show_by_program" value="Show by program" style="background-color: #626567; border: none;color: white;padding: 16px 32px;text-decoration: none;margin: 4px 2px;cursor: pointer;margin-top:20px;"/>
-            <input type="submit" name="show_by_degree" value="Show by degree" style="background-color: #626567; border: none;color: white;padding: 16px 32px;text-decoration: none;margin: 4px 2px;cursor: pointer;margin-top:20px;"/>
+            <input type="submit" name="show_all_student" value="Show all students" />
+            <input type="submit" name="show_by_semmester" value="Show by semester"/>
+            <input type="submit" name="show_by_program" value="Show by program" />
+            <input type="submit" name="show_by_degree" value="Show by degree" />
         </form>
     </div>
     <div class="contentTable">
-        <input type="text" id="search" name="search" placeholder="search" style="width:70%; height:20px; margin-top:10px;margin-bottom: 10px;"required>
+        <input type="text" id="search" name="search" placeholder="search" required>
         <table class="mytable">
             <tr>
                 <th>Student Name</th>
