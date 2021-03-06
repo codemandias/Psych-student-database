@@ -1,6 +1,6 @@
 <?php
 //Database connection script
-//Username and Password will need to be modified to meet local setup
+//Connecting to development psyc database
 $hostname = "outreach.cs.dal.ca";
 $username = "psycdatabase";
 $password = "akee7veef3oej1Ze";
