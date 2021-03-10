@@ -1,6 +1,7 @@
-.head{
+.head {
     padding-bottom: 0;
 }
+
 .navbar_Header {
     font-family: "Avenir", sans-serif;
     font-size: 30px;
@@ -14,17 +15,22 @@
     margin: 0 -20px;
     border-top: 1px solid #ba890c;
 }
+
 input[type=submit] {
     background-color: #626567;
-    border: none;color: white;
+    border: none;
+    color: white;
     padding: 16px 32px;
-    text-decoration: none;margin: 4px 2px;
-    cursor: pointer;margin-top:20px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-top: 20px;
 }
+
 #search {
-  width:70%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .navbar_PageLinks {
@@ -109,7 +115,7 @@ label[for=percentile] {
 footer {
     text-align: center;
     padding: 3px;
-    background-color: #f1f1f1 ;
+    background-color: #f1f1f1;
     color: black;
     position: fixed;
     left: 0;
@@ -230,18 +236,22 @@ div.content {
 }
 
 .MScStatus {
-  text-align: center;
-  width: 48%;
-  height: 300px;
-  border:1px solid black;
-  float: left;
+    text-align: center;
+    width: 48%;
+    height: 300px;
+    border: 1px solid black;
+    float: left;
 }
 
 .PhDStatus {
-  text-align: center;
-  margin-left: 49%;
-  height: 300px;
-  border:1px solid black;
+    text-align: center;
+    margin-left: 49%;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.dataEntry_Hr {
+    width: 237%;
 }
 
 

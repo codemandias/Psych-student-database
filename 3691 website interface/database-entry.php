@@ -9,10 +9,10 @@
             <a class="active" href="#Database-Entry">Database Entry</a>
             <a href='../3691 website interface/includes/admission.php'>Admission</a>
             <a href="../3691 website interface/includes/award.php">Awards</a>
-            <a href="#Comps">Comps</a>
+            <a href="../includes/comps.php">Comps</a>
             <a href="#Publications">Publications</a>
             <a href="#Presentation">Presentation</a>
-            <a href="#Progress">Progress</a>
+            <a href="../includes/progress.php">Progress</a>
             <a href="../3691 website interface/includes/status.php">Status</a>
         </div>
             <form method="get" action="">
@@ -44,7 +44,7 @@
                 <label for="supervisorFName"> </label><input type="text" id="emailField" name="email">
                 <label for="supervisorLName"> </label><input type="text" id="emailField" name="email"><br><br>
                 <label for="studentEmail">*Student Email: </label><input type="text" id="emailField" name="email"><br><br>
-                <hr style="width:310%;">
+                <hr style="width:305%;">
             </form>
         </div>
     </div>
