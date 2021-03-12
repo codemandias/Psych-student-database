@@ -6,5 +6,6 @@ node_modules
 */.env
 ./.env
 .env
-#temporary files
-*/~$API_Request_Layout.xlsx
+
+#editorFiles
+.idea
