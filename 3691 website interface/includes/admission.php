@@ -8,7 +8,7 @@ require 'header.php';
     <a class="active" href="../3691 website interface/includes/admission.php">Admission</a>
     <a href="../includes/award.php">Awards</a>
     <a href="../includes/comps.php">Comps</a>
-    <a href="#Publications">Publications</a>
+    <a href="../publications.php">Publications</a>
     <a href="#Presentation">Presentation</a>
     <a href="../includes/progress.php">Progress</a>
     <a href="../includes/status.php">Status</a>
