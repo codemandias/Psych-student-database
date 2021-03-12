@@ -7,14 +7,15 @@ require 'includes/header.php';
 <body>
 <div class="sidebar">
     <form method="post">
-        <input type="submit" name="show_all_student" value="Show all students"/>
-        <input type="submit" name="show_by_semmester" value="Show by semester"/>
-        <input type="submit" name="show_by_program" value="Show by program"/>
-        <input type="submit" name="show_by_degree" value="Show by degree"/>
+        <input type="submit" id="databaseviewer_button" name="show_all_student" value="Show all students"/>
+        <input type="submit" id="databaseviewer_button" name="show_by_semmester" value="Show by semester"/>
+        <input type="submit" id="databaseviewer_button" name="show_by_program" value="Show by program"/>
+        <input type="submit" id="databaseviewer_button" name="show_by_degree" value="Show by degree"/>
     </form>
 </div>
 <div class="contentTable">
-    <input type="text" id="search" name="search" placeholder="search" required>
+    <input type="text" id="search" name="search" placeholder="Search by entering a student name, student ID" required>
+    <input type="submit" id="databaseviewer_button" name="search" value="Search"/>
     <table class="mytable">
         <tr>
             <th>Student Name</th>
@@ -38,7 +39,16 @@ require 'includes/header.php';
         } //else if show by degree is pressed organize students by degree name
         else if (isset($_POST["show_by_degree"])) {
             $studentsQuery = "SELECT * FROM `student` ORDER BY `student`.`degree_type`";
-        } //if no button has been pressed just display all students
+        }
+        // esle if restrieve data based on the input
+        else if (isset($_POST["search"])){
+          $input = mysqli_real_escape_string($dbconnection, htmlspecialchars($_GET['search']));
+          $studentsQuery = "SELECT * FROM `student` WHERE ('first_name' LIKE '%$input%')
+                                                       OR ('last_name' LIKE '%$input%') 
+                                                       OR ('student_id' LIKE '%$input%')";
+
+        }
+        //if no button has been pressed just display all students
         else {
             $studentsQuery = "SELECT * FROM `student`";
         }

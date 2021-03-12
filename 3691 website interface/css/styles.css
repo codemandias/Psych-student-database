@@ -16,7 +16,7 @@
     border-top: 1px solid #ba890c;
 }
 
-input[type=submit] {
+#databaseviewer_button {
     background-color: #626567;
     border: none;
     color: white;
@@ -29,6 +29,7 @@ input[type=submit] {
 
 #search {
     width: 70%;
+    height: 45px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
