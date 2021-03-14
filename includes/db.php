@@ -1,10 +1,10 @@
 <?php
 //Database connection script
 //Connecting to development psyc database
-//$hostname = "outreach.cs.dal.ca";
-//$username = "psycdatabase";
-//$password = "akee7veef3oej1Ze";
-//$dbname = "devpsycdatabase";
+$hostname = "outreach.cs.dal.ca";
+$username = "psycdatabase";
+$password = "akee7veef3oej1Ze";
+$dbname = "devpsycdatabase";
 
 //creating new mysqli database object
 $dbconnection = new mysqli($hostname, $username, $password, $dbname);
