@@ -5,7 +5,7 @@ require 'header.php';
 <body>
 <div class="sidebar">
     <a href="../database-entry.php">Database Entry</a>
-    <a class="active" href="../3691 website interface/includes/admission.php">Admission</a>
+    <a class="active" href="../includes/admission.php">Admission</a>
     <a href="../includes/award.php">Awards</a>
     <a href="../includes/comps.php">Comps</a>
     <a href="../publications.php">Publications</a>
@@ -165,4 +165,3 @@ require 'header.php';
 <?php
 require 'footer.php';
 ?>
-
