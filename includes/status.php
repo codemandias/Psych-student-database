@@ -9,7 +9,7 @@ require 'header.php';
     <a href="../includes/award.php">Awards</a>
     <a href="../includes/comps.php">Comps</a>
     <a href="#Publications">Publications</a>
-    <a href="#Presentation">Presentation</a>
+    <a href="../includes/presentations.php">Presentation</a>
     <a href="../includes/progress.php">Progress</a>
     <a class="active" href="../includes/status.php">Status</a>
 </div>
