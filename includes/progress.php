@@ -10,7 +10,7 @@ require 'header.php';
     <a href="../includes/comps.php">Comps</a>
     <a href="#Publications">Publications</a>
     <a href="#Presentation">Presentation</a>
-    <a class="active" href="#../includes/progress.php">Progress</a>
+    <a class="active" href="../includes/progress.php">Progress</a>
     <a href="../includes/status.php">Status</a>
 </div>
 <form method="get">
@@ -91,4 +91,3 @@ require 'header.php';
 <?php
 require '../includes/footer.php';
 ?>
-

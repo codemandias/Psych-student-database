@@ -6,13 +6,13 @@ require 'includes/header.php';
 
 <div class="sidebar">
     <a class="active" href="#Database-Entry">Database Entry</a>
-    <a href='../3691 website interface/includes/admission.php'>Admission</a>
-    <a href="../3691 website interface/includes/award.php">Awards</a>
-    <a href="../includes/comps.php">Comps</a>
+    <a href='./includes/admission.php'>Admission</a>
+    <a href="./includes/award.php">Awards</a>
+    <a href="./includes/comps.php">Comps</a>
     <a href="#Publications">Publications</a>
     <a href="#Presentation">Presentation</a>
-    <a href="../includes/progress.php">Progress</a>
-    <a href="../3691 website interface/includes/status.php">Status</a>
+    <a href="./includes/progress.php">Progress</a>
+    <a href="./includes/status.php">Status</a>
 </div>
 
 <form method="post" action="../includes/process-admission.php">
@@ -51,7 +51,7 @@ require 'includes/header.php';
             </select>
             <label for="supervisorFName"> </label><input type="text" id="admissionSupervisorFName" name="admissionSupervisorFName">
             <label for="supervisorLName"> </label><input type="text" id="admissionSupervisorLName" name="admissionSupervisorLName"><br><br>
-            
+
             <label for="studentSupervisor">*Internal Supervisor(F/L): </label>
             <select name="studentSalutations" id="admissionSalutations">
                 <option value="mr">Mr.</option>

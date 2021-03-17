@@ -5,14 +5,14 @@ require 'includes/header.php';
 ?>
 
 <div class="sidebar">
-    <a href="../3691 website interface/database-entry.php">Database Entry</a>
-    <a href='../3691 website interface/includes/admission.php'>Admission</a>
-    <a href="../3691 website interface/includes/award.php">Awards</a>
-    <a href="../3691 website interface/includes/comps.php">Comps</a>
+    <a href="./database-entry.php">Database Entry</a>
+    <a href='./includes/admission.php'>Admission</a>
+    <a href="./includes/award.php">Awards</a>
+    <a href="./includes/comps.php">Comps</a>
     <a class="active" href="#Publications">Publications</a>
     <a href="#Presentation">Presentation</a>
-    <a href="../3691 website interface/includes/progress.php">Progress</a>
-    <a href="../3691 website interface/includes/status.php">Status</a>
+    <a href="./includes/progress.php">Progress</a>
+    <a href="./includes/status.php">Status</a>
 </div>
 
 <form method="post" action="../includes/process-admission.php">
@@ -53,12 +53,12 @@ require 'includes/header.php';
             <input type="text" placeholder="">
 
             <h3>Name of publication</h3>
-            <input type="text" placeholder=""> 
+            <input type="text" placeholder="">
 
             <h3>Modification date</h3>
             <input type="date" id="modDate" name="modDate" value="- -"
-                min="2000-01-01" required><br> 
-            
+                min="2000-01-01" required><br>
+
         </div>
             <div class="contentIMG">
             <img id="admissionProfile" width="200" />
