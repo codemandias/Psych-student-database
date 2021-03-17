@@ -44,6 +44,7 @@ require 'includes/header.php';
     $externalValue = 17500;
     $internalName = "NSGS";
     $internalValue = 10000;
+    $studentYear = 0;
 
     //PhD student case 1 example
     //figure out way to sort into external and internal awards
@@ -52,6 +53,7 @@ require 'includes/header.php';
     // $externalValue = 21000;
     // $internalName = "";
     // $internalValue = 0;
+    // $studentYear = 1;
 
     //PhD student case 2 example
     //figure out way to sort into external and internal awards
@@ -60,6 +62,7 @@ require 'includes/header.php';
     // $externalValue = 21000;
     // $internalName = "NSGS";
     // $internalValue = 15000;
+    // $studentYear = 1;
 
     // //PhD student case 3 example
     // //figure out way to sort into external and internal awards
@@ -68,6 +71,7 @@ require 'includes/header.php';
     // $externalValue = 35000;
     // $internalName = "NSGS";
     // $internalValue = 10000;
+    // $studentYear = 1;
 
     //PhD student case 4 example
     //figure out way to sort into external and internal awards
@@ -76,11 +80,17 @@ require 'includes/header.php';
     // $externalValue = 0;
     // $internalName = "";
     // $internalValue = 0;
-    // $fgsValue = 0;
+    // $studentYear = 3;
+
+    $fgsValue = 0;
+    $toppedUpValue = 0;
 
     $fgsValue = fgsCalculation($studentDegree, $externalValue, $internalValue);
     echo  "FGS would give student $" . $fgsValue;
     
+    $toppedUpValue = topUpCalculation($departmentMin, $departmentMax, $fgsValue, $studentDegree, $studentYear);
+    echo "<br>Total topped up value is $" . $toppedUpValue;
+
     function fgsCalculation($studentDegree, $externalValue, $internalValue){
         $fgsGives = 0;
         //masters student
@@ -131,6 +141,22 @@ require 'includes/header.php';
             }
         }
         return $fgsGives;
+    }
+
+    function topUpCalculation($departmentMin, $departmentMax, $fgsValue, $studentDegree, $studentYear){
+        if($fgsValue > $departmentMax){
+            return $fgsValue;
+        }
+        else{
+            //phd student
+            if(strcasecmp($studentDegree, "PhD") == 0){
+                if($studentYear <= 3){
+                    $departmentMin += 300*$studentYear;
+                }
+            }
+            $topUp = round((($fgsValue / $departmentMin) * ($departmentMax - $departmentMin) + ($departmentMin - $fgsGives)));
+            return $topUp;
+        }
     }
 ?>
 </div>
