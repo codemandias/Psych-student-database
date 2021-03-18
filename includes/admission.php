@@ -17,6 +17,11 @@ require 'header.php';
 <form method="post" action="../includes/process-admission.php">
     <div class="content">
         <div class="contentLeft">
+        <?php
+        if(isset($_GET['fieldsRequired'])){
+            echo "<h5 id = 'submitMsg' style = 'color:red;'> Required (*) fields cannot be empty </h5>";
+        }
+        ?>
            <h3>Student Information</h3>
              <p id="row">
                 <label for="sInfo">*Student(First/Last): </label>
@@ -63,17 +68,17 @@ require 'header.php';
             <input type="text" id="transferNoField" name="TNF"><br><br>
             <label for="studentDetails">Number of months off MSc to PhD: </label>
             <input type="text" id="monthsOffField" name="MFF"><br><br>
-            <label for="studentDetails">*Additional residency required? </label></label>
+            <label for="studentDetails">Additional residency required? </label></label>
             <input type="radio" id="yesID" name="resRequired" value="yes"> <label for="resLabel"> Yes</label>
             <input type="radio" id="noID" name="resRequired" value="no"><label for="resLabel"> No</label><br><br>
             <label for="studentDetails">*Most recent degree (Excluding our MSc): </label>
             <input type="text" id="recentDegree" name="RD"><br><br>
-            <label for="studentDetails">*Most recent school (Excluding our MSc): </label>
+            <label for="studentDetails">Most recent school (Excluding our MSc): </label>
             <input type="text" id="recentSchool" name="RS"><br><br>
-            <label for="studentDetails">*Admission GPA: </label>
+            <label for="studentDetails">Admission GPA: </label>
             <input type="text" id="admissionGPA" name="admissionGPA"><br><br>
             <p id="row">
-                <label for="sInfo">*GPA based on final transcript (score): </label>
+                <label for="sInfo">GPA based on final transcript (score): </label>
                 <input type="text" id="finalGPA" name="finalGPA"><br><br>
             </p>
             <p id="row">
