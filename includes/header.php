@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("db.php");
 
 if (isset($parentFile)) {
@@ -53,28 +53,28 @@ if ($pageDir == "includes") {
                               <a href='../calculations.php'>Calculations</a>";
                     break;
                 case "Database Entry":
-                    echo "<a class='active' href='./database-entry.php''>Add a Student</a>
-                      <a href='./homepage.php'>Find a Student</a>
-                      <a href='./databaseviewer.php'>Database Viewer</a>
-                      <a href='./calculations.php'>Calculations</a>";
+                    echo "<a class='active' href='../3691 website interface/database-entry.php''>Add a Student</a>
+                      <a href='../3691 website interface/homepage.php'>Find a Student</a>
+                      <a href='../3691 website interface/databaseviewer.php'>Database Viewer</a>
+                      <a href='../3691 website interface/calculations.php'>Calculations</a>";
                     break;
                 case "Dalhousie Graduate Psychology Database":
-                    echo "<a href='./database-entry.php''>Add a Student</a>
-                      <a class='active' href='./homepage.php'>Find a Student</a>
-                      <a href='./databaseviewer.php'>Database Viewer</a>
-                      <a href='./calculations.php'>Calculations</a>";
+                    echo "<a href='../3691 website interface/database-entry.php''>Add a Student</a>
+                      <a class='active' href='../3691 website interface/homepage.php'>Find a Student</a>
+                      <a href='../3691 website interface/databaseviewer.php'>Database Viewer</a>
+                      <a href='../3691 website interface/calculations.php'>Calculations</a>";
                     break;
                 case "Database Viewer":
-                    echo "<a href='./database-entry.php''>Add a Student</a>
-                      <a href='./homepage.php'>Find a Student</a>
-                      <a class='active' href='./databaseviewer.php'>Database Viewer</a>
-                      <a href='./calculations.php'>Calculations</a>";
+                    echo "<a href='../3691 website interface/database-entry.php''>Add a Student</a>
+                      <a href='../3691 website interface/homepage.php'>Find a Student</a>
+                      <a class='active' href='../3691 website interface/databaseviewer.php'>Database Viewer</a>
+                      <a href='../3691 website interface/calculations.php'>Calculations</a>";
                     break;
                 case "Calculations":
-                    echo "<a href='./database-entry.php''>Add a Student</a>
-                      <a href='./homepage.php'>Find a Student</a>
-                      <a href='./databaseviewer.php'>Database Viewer</a>
-                      <a class='active' href='./calculations.php'>Calculations</a>";
+                    echo "<a href='../3691 website interface/database-entry.php''>Add a Student</a>
+                      <a href='../3691 website interface/homepage.php'>Find a Student</a>
+                      <a href='../3691 website interface/databaseviewer.php'>Database Viewer</a>
+                      <a class='active' href='../3691 website interface/calculations.php'>Calculations</a>";
                     break;
             }
             ?>
