@@ -43,11 +43,14 @@ $modified = $_POST['modified'];
 $created = $_POST['created'];
 $author = $_POST['author'];
 
-
+if(empty($firstName) ||  empty($lastName) || empty($studentID) || empty($studentDegree) || empty($supervisorFName) || empty($studentEmail) || empty($admissionDate) || empty($foreignStudent) || empty($holdsMSc) || empty($hasMaster) || empty($transferDate) || empty($recentDegree)){
+      header("Location: ../includes/admission.php?fieldsRequired=1");
+}
+else{
 echo "$firstName $lastName $studentID $studentDegree $program $salutations $supervisorFName $supervisorLName $studentEmail $admissionDate 
       $foreignStudent $hasMaster $holdsMSc $transferDate $transferNo $monthsOff $resRequired $recentDegree $recentSchool $admissionGPA $finalGPA $scaleField
       $gre $grePercentile $verbal $verbalPercentile $quantitative $quantitativePercentile $analytical $analyticalPercentile $experimental
       $experimentalPercentile $psychological $psychologicalPercentile $social $socialPercentile $supervisorChange $noteBox $modified $created $author";
-
+}
 
 ?>

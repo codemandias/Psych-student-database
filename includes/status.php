@@ -9,7 +9,7 @@ require 'header.php';
     <a href="../includes/award.php">Awards</a>
     <a href="../includes/comps.php">Comps</a>
     <a href="#Publications">Publications</a>
-    <a href="#Presentation">Presentation</a>
+    <a href="../includes/presentations.php">Presentation</a>
     <a href="../includes/progress.php">Progress</a>
     <a class="active" href="../includes/status.php">Status</a>
 </div>
@@ -91,6 +91,24 @@ require 'header.php';
             <hr style="width: 166%">
             <h3>Leaves</h3>
             <p id="row">
+                <label for="leaves"> Start: </label>
+                <input type="date" id="leaveStart" name="leaveStartDate" value="- -" min="2000-01-01" required>
+                <label for="leaves"> Months of Approved Leave </label>
+                <input type="text" id="approvedMonths" name="leavesMonths" size="10px" required>
+                <label for="leaves"> Type of leave: </label>
+                <input type="text" id="leaveType" name="leaveTypeField" size="10px" required><br>
+                <label for="leaves"> Start: </label>
+                <input type="date" id="leaveStart" name="leaveStartDate" value="- -" min="2000-01-01" required>
+                <label for="leaves"> Months of Approved Leave </label>
+                <input type="text" id="approvedMonths" name="leavesMonths" size="10px" required>
+                <label for="leaves"> Type of leave: </label>
+                <input type="text" id="leaveType" name="leaveTypeField" size="10px" required><br>
+                <label for="leaves"> Start: </label>
+                <input type="date" id="leaveStart" name="leaveStartDate" value="- -" min="2000-01-01" required>
+                <label for="leaves"> Months of Approved Leave </label>
+                <input type="text" id="approvedMonths" name="leavesMonths" size="10px" required>
+                <label for="leaves"> Type of leave: </label>
+                <input type="text" id="leaveType" name="leaveTypeField" size="10px" required><br>
                 <label for="leaves"> Start: </label>
                 <input type="date" id="leaveStart" name="leaveStartDate" value="- -" min="2000-01-01" required>
                 <label for="leaves"> Months of Approved Leave </label>
