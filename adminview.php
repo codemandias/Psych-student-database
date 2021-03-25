@@ -11,7 +11,7 @@ require 'includes/header.php';
     <a href="../Psychology-Department-Grad-Student-database/includes/comps.php">Comps</a>
     <a href="#Publications">Publications</a>
     <a href="../Psychology-Department-Grad-Student-database/includes/presentations.php">Presentation</a>
-    <a href="../includes/progress.php">Progress</a>
+    <a href="../Psychology-Department-Grad-Student-database/includes/progress.php">Progress</a>
     <a href="../Psychology-Department-Grad-Student-database/includes/status.php">Status</a>
 </div>
 
