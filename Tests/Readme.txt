@@ -1,0 +1,1 @@
+Import this file in to Postman and run as a collection in order to test the API.

@@ -1,0 +1,1 @@
+This is code that will need to be integrated into the front end as it currently is only executed in order to return the token for accessing the API.
